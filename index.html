@@ -43,6 +43,45 @@ int main() {
     printf("%d", n - ans);
     return 0;
 }
+            #include <bits/stdc++.h>
+using namespace std;
+
+void arr() {
+    return;
+}
+
+int main() {
+    string ss[] = {"RED", "BLUE", "PURPLE", "YELLOW", "ORANGE", "GREEN"};
+    string s, s1;
+    int t = 4;
+
+    while (t--) {
+        cin >> s >> s1;
+
+        if (s == ss[0] && s1 == ss[3]) // RED + YELLOW
+            cout << "ORANGE";
+        else if (s == ss[1] && s1 == ss[3]) // BLUE + YELLOW
+            cout << "GREEN";
+        else if (s == ss[1] && s1 == ss[0]) // BLUE + RED
+            cout << "PURPLE";
+        else if (s == "BLACK")
+            cout << "DARK " << s1;
+        else if (s1 == "BLACK")
+            cout << "DARK " << s;
+        else if (s == "WHITE")
+            cout << "LIGHT " << s1;
+        else if (s1 == "WHITE")
+            cout << "LIGHT " << s;
+        else if (s1 == s)
+            cout << s;
+        else
+            cout << "N/A";
+
+        cout << "\n";
+    }
+
+    return 0;
+}
         </pre>         
     </p>
 </body>
